@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .tracking-container {
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+        input[type="text"], button {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .tracking-result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: none; /* Hidden initially */
+        }
+        .error {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="tracking-container">
+    <h2>Track Your Order</h2>
+    <form id="trackingForm" onsubmit="trackOrder(event)">
+        <label for="trackingNumber">Enter Tracking Number:</label>
+        <input type="text" id="trackingNumber" name="trackingNumber" placeholder="e.g., 123456789" required>
+        <button type="submit">Track</button>
+    </form>
+
+    <div id="trackingResult" class="tracking-result"></div>
+    <div id="errorMessage" class="error"></div>
+</div>
+
+<script>
+    async function trackOrder(event) {
+        event.preventDefault(); // Prevents form submission
+        const trackingNumber = document.getElementById('trackingNumber').value;
+        const trackingResult = document.getElementById('trackingResult');
+        const errorMessage = document.getElementById('errorMessage');
+
+        // Clear previous results
+        trackingResult.style.display = "none";
+        trackingResult.innerHTML = "";
+        errorMessage.innerHTML = "";
+
+        if (trackingNumber) {
+            try {
+                // Replace '/api/track-order' with your actual tracking endpoint
+                const response = await fetch(`/api/track-order?number=${trackingNumber}`);
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    
+                    // Display tracking information
+                    trackingResult.style.display = "block";
+                    trackingResult.innerHTML = `
+                        <h3>Order Status: ${data.status}</h3>
+                        <p><strong>Tracking Number:</strong> ${data.trackingNumber}</p>
+                        <p><strong>Estimated Delivery:</strong> ${data.estimatedDelivery}</p>
+                        <p><strong>Current Location:</strong> ${data.currentLocation}</p>
+                        <p><strong>Last Updated:</strong> ${data.lastUpdated}</p>
+                    `;
+                } else {
+                    errorMessage.innerHTML = "Tracking number not found. Please check your entry.";
+                }
+            } catch (error) {
+                errorMessage.innerHTML = "Error retrieving tracking information. Please try again later.";
+            }
+        } else {
+            errorMessage.innerHTML = "Please enter a tracking number.";
+        }
+    }
+</script>
+
+</body>
+</html>

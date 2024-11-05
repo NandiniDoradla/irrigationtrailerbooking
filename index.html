@@ -1,0 +1,362 @@
+<div><br class="Apple-interchange-newline"><!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>water trailer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://kit.fontawesome.com/269b9c4d7b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="scroll-up-btn">
+    <i class="fas fa-angle-up"></i>
+  </div>
+  <nav class="navbar">
+    <div class="max-width">
+      <div class="logo">
+        <a href="#">IrrigationTrai<span>ler.</span></a>
+      </div>
+      <ul class="menu" style="list-style-type: none; margin: 0; padding: 0;">
+        <li style="position: relative;">
+          <a href="#home" class="menu-btn" style="text-decoration: none; padding: 10px; display: block;">HOME</a>
+        </li>
+
+        <li style="position: relative;">
+          <a href="#about" class="menu-btn" style="text-decoration: none; padding: 10px; display: block;">WATER TRAILERS</a>
+          <ul style="display: none; position: absolute; top: 100%; left: 0; list-style-type: none; padding: 0; margin: 0; background: #fff;">
+            <li><a href="#about-1" style="padding: 10px; display: block; text-decoration: none;">1000liter water trailer</a></li>
+            <li><a href="#about-2" style="padding: 10px; display: block; text-decoration: none;">2000liter water trailer</a></li>
+            <li><a href="#about-3" style="padding: 10px; display: block; text-decoration: none;">3000liter water trailer</a></li>
+            <li><a href="#about-4" style="padding: 10px; display: block; text-decoration: none;">4000liter water trailer</a></li>
+          </ul>
+        </li>
+
+        <li style="position: relative;">
+  <a href="#projects" class="menu-btn" style="text-decoration: none; padding: 10px; display: block;">OTHER TRAILERS</a>
+  <ul style="display: none; position: absolute; top: 100%; left: 0; list-style-type: none; padding: 0; margin: 0; background: #fff;">
+    <li><a href="#projects-1" style="padding: 10px; display: block; text-decoration: none;">Green Space</a></li>
+    <li><a href="#projects-2" style="padding: 10px; display: block; text-decoration: none;">Construction</a></li>
+    <li><a href="#projects-3" style="padding: 10px; display: block; text-decoration: none;">Emergencies</a></li>
+  </ul>
+
+  <script>
+    // Get the OTHER TRAILERS menu element and its dropdown
+    const otherTrailersMenu = document.querySelector('li:nth-child(3)'); // Adjust this index based on the actual position in the menu
+    const otherTrailersDropdown = otherTrailersMenu.querySelector('ul');
+
+    // Show dropdown on hover
+    otherTrailersMenu.addEventListener('mouseenter', function() {
+      otherTrailersDropdown.style.display = 'block';
+    });
+    otherTrailersMenu.addEventListener('mouseleave', function() {
+      otherTrailersDropdown.style.display = 'none';
+    });
+  </script>
+</li>
+
+
+        <li style="position: relative;">
+          <a href="#contact" class="menu-btn" style="text-decoration: none; padding: 10px; display: block;">GET A QUOTE!</a>
+        </li>
+        <li style="position: relative;">
+          <a href="feedback.html" class="menu-btn" style="text-decoration: none; padding: 10px; display: block;">FEEDBACK</a>
+        </li>
+<li style="position: relative;">
+          <a href="track.html" class="menu-btn" style="text-decoration: none; padding: 10px; display: block;">TRACK YOUR ORDER</a>
+        </li>
+      </ul>
+
+
+     <!-- Language Selector as Menu Button -->
+<div class="language-selector" style="position: relative; display: inline-block; margin-left: auto;">
+  <button onclick="toggleDropdown()" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; background-color: #f9f9f9; cursor: pointer;">
+   Select Language
+  </button>
+  <div id="dropdownMenu" style="display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; border-radius: 5px;">
+    <a href="index.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">English</a>
+    <a href="maintel.html" style="color: black; padding: 12px 16px; text-decoration: none; display: block;">Telugu (తెలుగు)</a>
+  </div>
+</div>
+
+<script>
+  // Function to toggle the display of the dropdown menu
+  function toggleDropdown() {
+    var dropdown = document.getElementById("dropdownMenu");
+    dropdown.style.display = (dropdown.style.display === "none" || dropdown.style.display === "") ? "block" : "none";
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    var dropdown = document.getElementById("dropdownMenu");
+    if (!event.target.matches('.language-selector button')) {
+      if (dropdown && dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+      }
+    }
+  }
+</script>
+
+
+
+<script>
+    function toggleDropdown() {
+        var dropdown = document.getElementById("dropdownMenu");
+        dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.language-selector button')) {
+            var dropdown = document.getElementById("dropdownMenu");
+            if (dropdown && dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            }
+        }
+    }
+</script>
+
+      
+<div class="menu-btn">
+        <span>☰</span>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- Home Section Start -->
+<section class="home" id="home" style="display: flex; align-items: center; justify-content: center; padding: 50px 0;">
+  <div class="max-width" style="text-align: center;">
+    <div class="home-content" style="position: relative; display: inline-block; width: 1250px; height: 500px;">
+      
+      <!-- Centered Image with Set Dimensions -->
+      <img src="./image.jpeg" alt="Profile Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 30px; display: block;">
+
+      <!-- Overlay Text and Button on the Image -->
+      <div style="position: absolute; bottom: 20px; left: 20px; background: rgba(0, 0, 0, 0.6); color: #fff; padding: 10px; border-radius: 5px;">
+        <p style="margin: 0; font-size: 1.2em;">DESIGN TO PERFORM IN EVERY CHALLENGE!</p>
+        <a href="contact.html" target="_blank" style="color: #fff; background-color: #FF0000; padding: 8px 16px; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 5px;">CONTACT</a>
+      </div>
+    </div>
+
+    <!-- New Heading and Paragraph under the Image -->
+    <h2 style="margin-top: 20px; font-size: 2em; color: #FF0000;">Advanced Water Trailer For Every Need!</h2>
+    <p style="font-size: 1em; color: #FFFFFF;">Irrigation tank trailers are essential in urban settings for maintaining green spaces, providing water to parks and residential gardens. They help control dust on construction sites and unpaved roads, improving air quality and safety. Additionally, these trailers serve as a vital resource during emergencies, supporting firefighting efforts and delivering water for disaster relief, and  plays a vital role in urban by providing flexible, efficient, and effective water management solutions.</p>
+  </div>
+</section>
+
+
+
+  <!-- About Section Start -->
+<section class="about" id="about">
+  <div class="max-width">
+    <h2 class="title">WATER TRAILERS</h2>
+    <div class="about-content" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+
+      <!-- Card 1 -->
+      <div class="column card" style="width: 400px; background-color: #f9f9f9; padding: 15px; border-radius: 10px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        <img src="./image.jpeg" alt="Photo 1" style="width: 100%; height: auto; border-radius: 10px;">
+        <p style="font-size: 0.9em; color: #555; margin: 10px 0;">
+          1000 Liter Express Irrigation Trailer System.
+        </p>
+        <a href="contact.html" target="_blank" style="display: inline-block; color: #fff; background-color: #FF0000; padding: 8px 16px; border-radius: 5px; text-decoration: none;">GET A QUOTE</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="column card" style="width: 400px; background-color: #f9f9f9; padding: 15px; border-radius: 10px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        <img src="./image.jpeg" alt="Photo 2" style="width: 100%; height: auto; border-radius: 10px;">
+        <p style="font-size: 0.9em; color: #555; margin: 10px 0;">
+          2000 Liter Express Irrigation Trailer System.
+        </p>
+      <a href="contact.html" target="_blank" style="display: inline-block; color: #fff; background-color: #FF0000; padding: 8px 16px; border-radius: 5px; text-decoration: none;">GET A QUOTE</a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="column card" style="width: 400px; background-color: #f9f9f9; padding: 15px; border-radius: 10px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        <img src="./image.jpeg" alt="Photo 3" style="width: 100%; height: auto; border-radius: 10px;">
+        <p style="font-size: 0.9em; color: #555; margin: 10px 0;">
+          3000 Liter Express Irrigation Trailer System.
+        </p>
+         <a href="contact.html" target="_blank" style="display: inline-block; color: #fff; background-color: #FF0000; padding: 8px 16px; border-radius: 5px; text-decoration: none;">GET A QUOTE</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="column card" style="width: 400px; background-color: #f9f9f9; padding: 15px; border-radius: 10px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        <img src="./image.jpeg" alt="Photo 4" style="width: 100%; height: auto; border-radius: 10px;">
+        <p style="font-size: 0.9em; color: #555; margin: 10px 0;">
+          4000 Liter Express Irrigation Trailer System.
+        </p>
+         <a href="contact.html" target="_blank" style="display: inline-block; color: #fff; background-color: #FF0000; padding: 8px 16px; border-radius: 5px; text-decoration: none;">GET A QUOTE</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- services section start -->
+  <section class="projects" id="projects">
+    <div class="max-width">
+      <h2 class="title">OTHER TRAILER</h2>
+      <div class="projects-content">
+        <div class="carousel owl-carousel">
+          <a class="alink" href="#home">
+            <div class="card">
+              <div class="box">
+		<i class="fa-solid fa-leaf"></i> 
+                <div class="text">GREEN SPACE</div>
+                <p>
+                 Irrigation tank trailers are essential for maintaining green spaces in urban areas, ensuring that parks and gardens receive adequate irrigation. They provide a reliable and efficient way to transport and distribute water, promoting healthy plant growth and enhancing the overall aesthetics of the environment.
+                </p>
+              </div>
+<a href="contact.html" target="_blank" style="display: inline-block; color: #fff; background-color: #FF0000; padding: 8px 16px; border-radius: 5px; text-decoration: none;">GET A QUOTE</a>
+
+            </div>
+          </a>
+<br>
+          <div class="card">
+            <div class="box">
+		<i class="fa-solid fa-hammer"></i> 
+              <div class="text">CONSTRUCTION</div>
+              <p>
+                Irrigation tank trailers play a crucial role in construction sites by providing a consistent water supply for dust control and site hygiene. They also facilitate concrete mixing and curing, ensuring that construction processes run smoothly and safely while minimizing environmental impact.
+              </p>
+            </div>
+<a href="contact.html" target="_blank" style="display: inline-block; color: #fff; background-color: #FF0000; padding: 8px 16px; border-radius: 5px; text-decoration: none;">GET A QUOTE</a>
+
+          </div>
+<br>
+          <div class="card">
+            <div class="box">
+              <i class="fa-solid fa-exclamation-triangle"></i> 
+              <div class="text">EMERGENCIES</div>
+              <p>
+                Irrigation tank trailers are vital during emergencies, supplying essential water for firefighting efforts and disaster relief operations. Their mobility allows for rapid deployment to affected areas, ensuring access to clean water for both rescue teams and impacted communities.
+              </p>
+            </div>
+<a href="contact.html" target="_blank" style="display: inline-block; color: #fff; background-color: #FF0000; padding: 8px 16px; border-radius: 5px; text-decoration: none;">GET A QUOTE</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- contact section start -->
+  <section class="contact" id="contact">
+    <div class="max-width">
+      <h2 class="title">Contact</h2>
+      <div class="contact-content">
+        <div class="column left">
+          <div class="row-icons">
+            
+          </div>
+          <div class="icons">
+            <div class="row">
+              <i class="fas fa-user"></i>
+              <div class="info">
+                <div class="head">Name</div>
+                <div class="sub-title">INTELLIGENT URBAN IRRIGATION SYSTEM</div>
+              </div>
+            </div>
+            <div class="row">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="info">
+                <div class="head">Address</div>
+                <div class="sub-title">Andhra Pradesh, India</div>
+              </div>
+            </div>
+            <div class="row">
+              <i class="fas fa-phone"></i>
+              <div class="info">
+                <div class="head">Phone #</div>
+                <div class="sub-title">+91 999999999</div>
+              </div>
+            </div>
+            <div class="row">
+              <i class="fas fa-envelope"></i>
+              <div class="info">
+                <div class="head">Email</div>
+                <div class="sub-title">
+                  <p>watertrailer@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column right">
+          <div class="text">REQUEST WATER TRAILER QUOTES!</div>
+          <form name="submit-to-google-sheet">
+            <div class="fields">
+              <div class="field name">
+                <input type="text" name="Name" placeholder="Name" required />
+              </div>
+              <div class="field email">
+              <input type="email" name="Email" placeholder="Email" required />
+              </div>
+              </div>
+              <div class="field subject">
+              <input type="message" name="Message" placeholder="REQUIREMENT OF WATER(in Liters)" required />
+              </div>
+               <div class="field address">
+            <input type="text" name="Location" id="location" placeholder="Address" required />
+            <button type="button" onclick="openGoogleMaps()">Get Location</button>
+        </div>
+        <div class="button">
+            <button type="submit">BOOK NOW</button>
+        </div>
+    </form>
+    <span id="msg"></span>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwPY9H_I3GN42cUejTcJCs9ty3tfItmXBdWZVdKLhuZAsFY2mWrVnwhAGDhjlJQbC94MQ/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const msg = document.getElementById("msg");
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Order placed. You will receive confirmation shortly.";
+                setTimeout(function() {
+                    msg.innerHTML = "";
+                }, 2000);
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message));
+    });
+
+
+    function openGoogleMaps() {
+        const locationInput = document.getElementById("location");
+        const googleMapsURL = "https://www.google.com/maps";
+        
+        // Open Google Maps in a new tab
+        window.open(googleMapsURL, '_blank');
+
+        // Set a timeout to allow the user to copy the link manually
+        setTimeout(() => {
+            // Prompt the user to copy the Google Maps link manually
+            alert("Please copy the location link from Google Maps and paste it here.");
+        }, 500);
+    }
+</script>
+
+
+
+
+
+
+ 
+
+ 
